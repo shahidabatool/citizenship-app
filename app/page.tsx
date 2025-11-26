@@ -1,66 +1,71 @@
-import Image from "next/image";
+"use client";
+
+import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <main className={styles.main}>
+      <div className={styles.backgroundGlow} />
+
+      <div className={styles.themeToggleWrapper}>
+        <ThemeToggle />
+      </div>
+
+      <div className={styles.header}>
+        <h1 className={styles.title}>Citizenship Prep</h1>
+        <p className={styles.subtitle}>
+          Master your citizenship test with our premium, modern preparation platform.
+          Choose your country to begin your journey.
+        </p>
+      </div>
+
+      <div className={styles.grid}>
+        <Link href="/canada" className={styles.card}>
+          <div className={styles.imageWrapper}>
+            <img
+              src="/canada.jpg"
+              alt="Canada - Discover Canada"
+              className={styles.cardImage}
             />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className={styles.overlay} />
+          </div>
+          <div className={styles.badge}>100+ Questions</div>
+          <div className={styles.cardContent}>
+            <h2 className={styles.cardTitle}>🍁 Canada</h2>
+            <p>Discover Canada - Prepare for your Canadian citizenship test</p>
+          </div>
+        </Link>
+
+        <Link href="/uk" className={styles.card}>
+          <div className={styles.imageWrapper}>
+            <img
+              src="/UK.jpg"
+              alt="United Kingdom - Life in the UK"
+              className={styles.cardImage}
+            />
+            <div className={styles.overlay} />
+          </div>
+          <div className={styles.badge}>100+ Questions</div>
+          <div className={styles.cardContent}>
+            <h2 className={styles.cardTitle}><span className={styles.flagText}>GB</span> United Kingdom</h2>
+            <p>Life in the UK - Master your British citizenship test</p>
+          </div>
+        </Link>
+
+        <div className={styles.card + ' ' + styles.aboutCard}>
+          <div className={styles.cardContent}>
+            <h2 className={styles.cardTitle}>ℹ️ About Us</h2>
+            <p>Learn more about GlobalCitizen Prep</p>
+            <p className={styles.aboutText}>
+              GlobalCitizen Prep is your comprehensive platform for citizenship test preparation.
+              We provide high-quality practice questions, study materials, and mock tests to help you
+              succeed in your citizenship journey for Canada and the United Kingdom.
+            </p>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
