@@ -4,6 +4,16 @@ A modern, interactive web application designed to help users prepare for **Canad
 
 ---
 
+## 🌐 Live Demo
+
+**[🚀 Try the App Now - Completely Free!](https://citizenship-izujjfjoy-shahidas-projects-4151b7d2.vercel.app/)**
+
+Experience the full application live on Vercel! **No installation, no sign-up, no cost** - just start practicing for your Canadian or UK citizenship test immediately. Perfect for anyone preparing for their citizenship exam!
+
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://citizenship-izujjfjoy-shahidas-projects-4151b7d2.vercel.app/)
+
+---
+
 ## ✨ Features
 
 ### 🎯 Dual Country Support
@@ -229,6 +239,21 @@ The application is structured to easily integrate **Google AdSense** for monetiz
 - Fast loading times for better ad performance
 - Mobile-responsive for maximum reach
 - High-quality content that complies with AdSense policies
+
+---
+
+## 🔮 Future Enhancements
+
+This app is designed to be easily expandable! Potential future additions include:
+
+- **Additional Countries**: The architecture supports adding more citizenship tests (e.g., USA, Australia, New Zealand)
+- **More Questions**: Continuously expanding the question database
+- **Progress Tracking**: Save your progress and track improvement over time
+- **Study Statistics**: Detailed analytics on your performance by topic
+- **Multiple Languages**: Support for non-English speakers
+- **Mobile App**: Native iOS and Android versions
+
+The codebase is structured to make adding new countries straightforward - just add new question sets and country configurations!
 
 ---
 
