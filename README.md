@@ -6,11 +6,13 @@ A modern, interactive web application designed to help users prepare for **Canad
 
 ## 🌐 Live Demo
 
-**[🚀 Try the App Now - Completely Free!](https://citizenship-izujjfjoy-shahidas-projects-4151b7d2.vercel.app/)**
+**[🚀 Try the App Now - Completely Free!](https://citizenship-app.vercel.app/)**
 
 Experience the full application live on Vercel! **No installation, no sign-up, no cost** - just start practicing for your Canadian or UK citizenship test immediately. Perfect for anyone preparing for their citizenship exam!
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://citizenship-izujjfjoy-shahidas-projects-4151b7d2.vercel.app/)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://citizenship-app.vercel.app/)
+
+> **📌 Note**: If you're deploying your own version and the link requires authentication, see [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for step-by-step instructions to make your deployment publicly accessible.
 
 ---
 
@@ -219,14 +221,23 @@ This app can be deployed on various free hosting platforms:
 1. Push your code to GitHub
 2. Import project on [Vercel](https://vercel.com)
 3. Deploy with one click
-4. **Features**: Automatic deployments, custom domains, analytics
+4. **Features**: Automatic deployments, free `.vercel.app` domain, analytics
+5. **Note**: Custom domains require Vercel Pro ($20/month)
 
-### Alternative Options:
-- **Netlify**: Easy deployment with continuous integration
+### Alternative Options (Free with Custom Domains):
+- **Netlify**: Easy deployment with continuous integration + free custom domains
+- **Cloudflare Pages**: Fast deployment with free custom domain support
+- **Render**: Free tier with automatic SSL and custom domains
 - **Railway**: Simple deployment with database support
-- **Render**: Free tier with automatic SSL
 
-See the [Deployment Guide](#deployment-guide) section below for detailed instructions.
+### 📖 Detailed Deployment Instructions
+
+See **[DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)** for:
+- Step-by-step Vercel setup
+- How to fix authentication/access issues
+- Custom domain configuration
+- Alternative hosting platform guides
+- Troubleshooting common problems
 
 ---
 
