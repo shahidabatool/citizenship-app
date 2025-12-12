@@ -90,6 +90,22 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      {/* Footer with Legal Links */}
+      <footer className={styles.footer}>
+        <div className={styles.footerLinks}>
+          <Link href="/privacy-policy" className={styles.footerLink}>
+            Privacy Policy
+          </Link>
+          <span className={styles.footerDivider}>•</span>
+          <Link href="/terms" className={styles.footerLink}>
+            Terms & Conditions
+          </Link>
+        </div>
+        <p className={styles.footerCopyright}>
+          © {new Date().getFullYear()} Citizenship Prep. All rights reserved.
+        </p>
+      </footer>
     </main>
   );
 }
