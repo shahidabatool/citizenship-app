@@ -253,10 +253,4 @@ This project is open source and available for educational purposes.
 
 ---
 
-## 📞 Support
-
-For questions or support, please open an issue in the repository.
-
----
-
 **Made with ❤️ for aspiring citizens of Canada and the United Kingdom**
