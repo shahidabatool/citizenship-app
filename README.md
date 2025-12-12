@@ -6,11 +6,11 @@ A modern, interactive web application designed to help users prepare for **Canad
 
 ## 🌐 Live Demo
 
-**[🚀 Try the App Now - Completely Free!](https://citizenship-app.vercel.app/)**
+**[🚀 Try the App Now - Completely Free!](https://citizenship-test-app.vercel.app/)**
 
 Experience the full application live on Vercel! **No installation, no sign-up, no cost** - just start practicing for your Canadian or UK citizenship test immediately. Perfect for anyone preparing for their citizenship exam!
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://citizenship-app.vercel.app/)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://citizenship-test-app.vercel.app/)
 
 > **📌 Note**: If you're deploying your own version and the link requires authentication, see [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for step-by-step instructions to make your deployment publicly accessible.
 
