@@ -13,7 +13,7 @@ export default async function BookletPage({ params }: BookletPageProps) {
 
     const pdfUrl = isCanada
         ? "/pdfs/discover.pdf"
-        : "/pdfs/document.pdf";
+        : "/pdfs/pdf-guildline.pdf";
 
     return (
         <main className={styles.main}>
@@ -22,7 +22,7 @@ export default async function BookletPage({ params }: BookletPageProps) {
             </Link>
 
             <div className={styles.header}>
-                <div className={styles.flag}>{isCanada ? "🍁" : "GB"}</div>
+                <div className={styles.flag}>{isCanada ? "🍁" : "🇬🇧"}</div>
                 <h1 className={styles.title}>
                     {isCanada ? "Discover Canada Study Guide" : "Life in the UK Study Guide"}
                 </h1>

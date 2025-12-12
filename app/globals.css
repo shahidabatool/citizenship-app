@@ -70,6 +70,14 @@
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
   --radius-full: 9999px;
+  /* Futuristic Theme Variables */
+  --bg-gradient: radial-gradient(circle at top center, #f0f9ff 0%, #e0f2fe 100%);
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(255, 255, 255, 0.5);
+  --text-glow: 0 0 20px rgba(59, 130, 246, 0.1);
+  --title-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  --glow-color-1: rgba(59, 130, 246, 0.1);
+  --glow-color-2: rgba(139, 92, 246, 0.1);
 }
 
 /* Dark Mode - Using data-theme attribute */
@@ -87,6 +95,15 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+
+  /* Futuristic Theme Variables - Dark */
+  --bg-gradient: radial-gradient(circle at top center, #1e1b4b 0%, #0f172a 100%);
+  --card-bg: rgba(30, 41, 59, 0.4);
+  --card-border: rgba(255, 255, 255, 0.05);
+  --text-glow: 0 0 40px rgba(255, 255, 255, 0.1);
+  --title-gradient: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  --glow-color-1: rgba(79, 70, 229, 0.15);
+  --glow-color-2: rgba(147, 51, 234, 0.15);
 }
 
 /* Also support system preference */
@@ -101,6 +118,15 @@
     --border: #334155;
     --glass-bg: rgba(30, 41, 59, 0.7);
     --glass-border: rgba(255, 255, 255, 0.1);
+
+    /* Futuristic Theme Variables - Dark */
+    --bg-gradient: radial-gradient(circle at top center, #1e1b4b 0%, #0f172a 100%);
+    --card-bg: rgba(30, 41, 59, 0.4);
+    --card-border: rgba(255, 255, 255, 0.05);
+    --text-glow: 0 0 40px rgba(255, 255, 255, 0.1);
+    --title-gradient: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+    --glow-color-1: rgba(79, 70, 229, 0.15);
+    --glow-color-2: rgba(147, 51, 234, 0.15);
   }
 }
 
@@ -351,4 +377,16 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-secondary);
+}
+
+/* Hide Next.js Development Indicator */
+#__next-build-watcher,
+nextjs-portal {
+  display: none !important;
+}
+
+/* Hide React DevTools and Next.js indicators */
+[data-nextjs-scroll-focus-boundary],
+[data-nextjs-dialog-overlay] {
+  display: none !important;
 }

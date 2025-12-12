@@ -21,8 +21,9 @@ export default async function SampleTestPage({ params }: SampleTestPageProps) {
     const { country } = await params;
     const countryQuestions = questions[country as "canada" | "uk"] || [];
 
-    // Select 15 random questions for sample test
-    const sampleQuestions = shuffleArray(countryQuestions).slice(0, 15);
+    // Select random questions for sample test (20 for Canada, 24 for UK)
+    const questionCount = country === "uk" ? 24 : 20;
+    const sampleQuestions = shuffleArray(countryQuestions).slice(0, questionCount);
 
     return (
         <QuizInterface

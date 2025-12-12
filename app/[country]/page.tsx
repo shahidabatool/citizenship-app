@@ -9,18 +9,16 @@ type CountryPageProps = {
 
 const countryData = {
     canada: {
-        flag: "🍁",
         name: "Canada",
         subtitle: "Discover Canada - Your Path to Canadian Citizenship",
         mockQuestions: 20,
-        sampleQuestions: 15,
+        sampleQuestions: 20,
     },
     uk: {
-        flag: "GB",
         name: "United Kingdom",
         subtitle: "Life in the UK - Your British Citizenship Journey",
         mockQuestions: 24,
-        sampleQuestions: 15,
+        sampleQuestions: 24,
     },
 };
 
@@ -39,7 +37,6 @@ export default async function CountryPage({ params }: CountryPageProps) {
             </Link>
 
             <div className={styles.header}>
-                <div className={styles.flag}>{data.flag}</div>
                 <h1 className={styles.title}>{data.name} Citizenship Test</h1>
                 <p className={styles.subtitle}>{data.subtitle}</p>
             </div>

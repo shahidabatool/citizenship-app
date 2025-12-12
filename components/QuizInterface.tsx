@@ -53,20 +53,34 @@ export default function QuizInterface({
         const newAnswers = [...selectedAnswers];
         newAnswers[currentIndex] = answerIndex;
         setSelectedAnswers(newAnswers);
-        setShowExplanation(true);
+
+        // Only show explanation if NOT in mock mode
+        if (mode !== "mock") {
+            setShowExplanation(true);
+        }
     };
 
     const handleNext = () => {
         if (currentIndex < questions.length - 1) {
             setCurrentIndex(currentIndex + 1);
-            setShowExplanation(false);
+            // Show explanation for next question if already answered and NOT in mock mode
+            if (mode !== "mock") {
+                setShowExplanation(selectedAnswers[currentIndex + 1] !== null);
+            } else {
+                setShowExplanation(false);
+            }
         }
     };
 
     const handlePrevious = () => {
         if (currentIndex > 0) {
             setCurrentIndex(currentIndex - 1);
-            setShowExplanation(selectedAnswers[currentIndex - 1] !== null);
+            // Show explanation for previous question if already answered and NOT in mock mode
+            if (mode !== "mock") {
+                setShowExplanation(selectedAnswers[currentIndex - 1] !== null);
+            } else {
+                setShowExplanation(false);
+            }
         }
     };
 
@@ -194,14 +208,16 @@ export default function QuizInterface({
                     {currentQuestion.options.map((option, index) => {
                         const isSelected = selectedAnswer === index;
                         const isCorrectAnswer = index === currentQuestion.correctAnswer;
-                        const showCorrect = showExplanation && isCorrectAnswer;
-                        const showIncorrect = showExplanation && isSelected && !isCorrect;
+
+                        // Only show correct/incorrect styling if NOT in mock mode
+                        const showCorrect = mode !== "mock" && showExplanation && isCorrectAnswer;
+                        const showIncorrect = mode !== "mock" && showExplanation && isSelected && !isCorrect;
 
                         return (
                             <button
                                 key={index}
-                                onClick={() => !showExplanation && handleAnswerSelect(index)}
-                                disabled={showExplanation}
+                                onClick={() => (!showExplanation || mode === "mock") && handleAnswerSelect(index)}
+                                disabled={showExplanation && mode !== "mock"}
                                 className={`${styles.optionButton} ${isSelected ? styles.selected : ""
                                     } ${showCorrect ? styles.correct : ""} ${showIncorrect ? styles.incorrect : ""
                                     }`}
@@ -217,7 +233,7 @@ export default function QuizInterface({
                     })}
                 </div>
 
-                {showExplanation && (
+                {showExplanation && mode !== "mock" && (
                     <div className={`${styles.explanation} ${isCorrect ? styles.explanationCorrect : styles.explanationIncorrect}`}>
                         <div className={styles.explanationHeader}>
                             {isCorrect ? "✓ Correct!" : "✗ Incorrect"}

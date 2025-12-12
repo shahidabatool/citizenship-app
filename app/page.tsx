@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const [showAbout, setShowAbout] = useState(false);
+
   return (
     <main className={styles.main}>
       <div className={styles.backgroundGlow} />
@@ -49,23 +52,44 @@ export default function Home() {
           </div>
           <div className={styles.badge}>100+ Questions</div>
           <div className={styles.cardContent}>
-            <h2 className={styles.cardTitle}><span className={styles.flagText}>GB</span> United Kingdom</h2>
+            <h2 className={styles.cardTitle}>🇬🇧 United Kingdom</h2>
             <p>Life in the UK - Master your British citizenship test</p>
           </div>
         </Link>
 
-        <div className={styles.card + ' ' + styles.aboutCard}>
+        {/* About Us Card - Uniform Design */}
+        <div className={`${styles.card} ${styles.aboutCard}`} onClick={() => setShowAbout(true)}>
+          <div className={styles.imageWrapper}>
+            <div className={`${styles.cardImage} ${styles.aboutImagePlaceholder}`} />
+            <div className={styles.overlay} />
+          </div>
           <div className={styles.cardContent}>
             <h2 className={styles.cardTitle}>ℹ️ About Us</h2>
-            <p>Learn more about GlobalCitizen Prep</p>
-            <p className={styles.aboutText}>
-              GlobalCitizen Prep is your comprehensive platform for citizenship test preparation.
-              We provide high-quality practice questions, study materials, and mock tests to help you
-              succeed in your citizenship journey for Canada and the United Kingdom.
-            </p>
+            <p>Learn more about Citizenship Prep</p>
           </div>
         </div>
       </div>
+
+      {/* About Us Modal */}
+      {showAbout && (
+        <div className={styles.modalOverlay} onClick={() => setShowAbout(false)}>
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <button className={styles.closeButton} onClick={() => setShowAbout(false)}>×</button>
+            <h2 className={styles.modalTitle}>About Citizenship Prep</h2>
+            <div className={styles.modalBody}>
+              <p>
+                Citizenship Prep is your comprehensive platform for citizenship test preparation.
+                We provide high-quality practice questions, study materials, and mock tests to help you
+                succeed in your citizenship journey for Canada and the United Kingdom.
+              </p>
+              <p>
+                Our goal is to make studying efficient, engaging, and effective. Whether you are preparing
+                for the "Discover Canada" test or the "Life in the UK" test, we have the resources you need.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
