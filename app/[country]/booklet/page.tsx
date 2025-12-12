@@ -37,23 +37,17 @@ export default async function BookletPage({ params }: BookletPageProps) {
                         <h2>📚 {isCanada ? "Discover Canada" : "Life in the UK"} Study Guide</h2>
                     </div>
 
-                    <div className={styles.pdfViewer}>
-                        <iframe
-                            src={pdfUrl}
-                            className={styles.pdfFrame}
-                            title={isCanada ? "Discover Canada Study Guide" : "Life in the UK Study Guide"}
-                        />
-                    </div>
-
-                    <div className={styles.mobileMessage}>
-                        <p>📱 On mobile? Tap the button below to view the PDF:</p>
+                    <div className={styles.pdfMessage}>
+                        <div className={styles.pdfIcon}>📄</div>
+                        <h3>Official Study Guide</h3>
+                        <p>Click the button below to view the official government study material in a new tab.</p>
                         <a
                             href={pdfUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.openButton}
                         >
-                            📄 Open Study Guide
+                            📖 Open Study Guide
                         </a>
                     </div>
                 </div>
