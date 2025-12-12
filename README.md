@@ -6,11 +6,11 @@ A modern, interactive web application designed to help users prepare for **Canad
 
 ## 🌐 Live Demo
 
-**[🚀 Try the App Now - Completely Free!](https://citizenship-izujjfjoy-shahidas-projects-4151b7d2.vercel.app/)**
+**[🚀 Try the App Now - Completely Free!](https://citizenship-6a2y1n4yi-shahidas-projects-4151b7d2.vercel.app//)**
 
 Experience the full application live on Vercel! **No installation, no sign-up, no cost** - just start practicing for your Canadian or UK citizenship test immediately. Perfect for anyone preparing for their citizenship exam!
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://citizenship-izujjfjoy-shahidas-projects-4151b7d2.vercel.app/)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://citizenship-6a2y1n4yi-shahidas-projects-4151b7d2.vercel.app//)
 
 ---
 
