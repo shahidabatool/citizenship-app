@@ -199,7 +199,8 @@ export default function TermsAndConditions() {
                     </p>
                     <p className={styles.contactInfo}>
                         Email: citizenshipprep.help@gmail.com<br />
-                        Website: https://citizenshipprep.vercel.app
+                        Website: https://citizenship-test-app.vercel.app
+
 
                     </p>
                 </section>
