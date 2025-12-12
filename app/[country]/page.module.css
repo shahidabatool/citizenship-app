@@ -222,6 +222,8 @@
 @media (max-width: 639px) {
     .header {
         padding: 2rem 1rem;
+        padding-top: 4rem;
+        /* Add space for back button */
     }
 
     .flag {

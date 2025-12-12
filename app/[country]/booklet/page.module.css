@@ -131,4 +131,20 @@
     .pdfViewer {
         height: 70vh;
     }
+
+    .backButton {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.625rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .header {
+        padding-top: 3.5rem;
+        /* Add space for back button */
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
 }
