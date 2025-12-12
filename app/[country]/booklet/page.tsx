@@ -35,13 +35,6 @@ export default async function BookletPage({ params }: BookletPageProps) {
                 <div className={styles.pdfSection}>
                     <div className={styles.pdfHeader}>
                         <h2>📚 {isCanada ? "Discover Canada" : "Life in the UK"} Study Guide</h2>
-                        <a
-                            href={pdfUrl}
-                            download
-                            className={styles.downloadButton}
-                        >
-                            ⬇️ Download PDF
-                        </a>
                     </div>
 
                     <div className={styles.pdfViewer}>
@@ -50,6 +43,18 @@ export default async function BookletPage({ params }: BookletPageProps) {
                             className={styles.pdfFrame}
                             title={isCanada ? "Discover Canada Study Guide" : "Life in the UK Study Guide"}
                         />
+                    </div>
+
+                    <div className={styles.mobileMessage}>
+                        <p>📱 On mobile? Tap the button below to view the PDF:</p>
+                        <a
+                            href={pdfUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.openButton}
+                        >
+                            📄 Open Study Guide
+                        </a>
                     </div>
                 </div>
             </div>
