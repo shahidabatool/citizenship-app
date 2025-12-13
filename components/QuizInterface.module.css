@@ -3,6 +3,10 @@
     padding: 1.5rem 1rem;
     max-width: 900px;
     margin: 0 auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /* Prevent scroll jumping on mobile */
+    position: relative;
 }
 
 /* Header */
@@ -151,6 +155,9 @@
     transition: all 0.2s ease;
     cursor: pointer;
     position: relative;
+    /* Better mobile touch handling */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .optionButton:hover:not(:disabled) {
@@ -291,6 +298,9 @@
     font-size: 1rem;
     transition: all 0.2s ease;
     cursor: pointer;
+    /* Prevent scroll on mobile when tapping */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .navButton {

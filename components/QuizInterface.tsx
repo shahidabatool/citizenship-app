@@ -50,6 +50,9 @@ export default function QuizInterface({
     }, [timeLimit, timeRemaining, isFinished]);
 
     const handleAnswerSelect = (answerIndex: number) => {
+        // Prevent scroll on mobile
+        const scrollY = window.scrollY;
+
         const newAnswers = [...selectedAnswers];
         newAnswers[currentIndex] = answerIndex;
         setSelectedAnswers(newAnswers);
@@ -58,10 +61,18 @@ export default function QuizInterface({
         if (mode !== "mock") {
             setShowExplanation(true);
         }
+
+        // Restore scroll position after state update
+        requestAnimationFrame(() => {
+            window.scrollTo(0, scrollY);
+        });
     };
 
     const handleNext = () => {
         if (currentIndex < questions.length - 1) {
+            // Save current scroll position
+            const scrollY = window.scrollY;
+
             setCurrentIndex(currentIndex + 1);
             // Show explanation for next question if already answered and NOT in mock mode
             if (mode !== "mock") {
@@ -69,11 +80,24 @@ export default function QuizInterface({
             } else {
                 setShowExplanation(false);
             }
+
+            // Scroll to top of quiz container smoothly on mobile
+            requestAnimationFrame(() => {
+                const quizContainer = document.querySelector('[class*="quizContainer"]');
+                if (quizContainer) {
+                    quizContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
         }
     };
 
     const handlePrevious = () => {
         if (currentIndex > 0) {
+            // Save current scroll position
+            const scrollY = window.scrollY;
+
             setCurrentIndex(currentIndex - 1);
             // Show explanation for previous question if already answered and NOT in mock mode
             if (mode !== "mock") {
@@ -81,6 +105,16 @@ export default function QuizInterface({
             } else {
                 setShowExplanation(false);
             }
+
+            // Scroll to top of quiz container smoothly on mobile
+            requestAnimationFrame(() => {
+                const quizContainer = document.querySelector('[class*="quizContainer"]');
+                if (quizContainer) {
+                    quizContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
         }
     };
 
